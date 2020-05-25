@@ -1,0 +1,155 @@
+Solution for question 1.
+
+def equilibriumIndex(A):
+
+	left = [0] * len(A)
+
+	for i in range(1, len(A)):
+		left[i] = left[i - 1] + A[i - 1]
+	right = 0
+
+	indices = []
+
+	for i in reversed(range(len(A))):
+
+		if left[i] == right:
+			indices.append(i)
+
+		right += A[i]
+
+	print("Equilibrium Index found at", indices)
+
+if __name__ == '__main__':
+
+	A = [0, -3, 5, -4, -2, 3, 1, 0]
+	equilibriumIndex(A)
+
+
+
+Output:
+Equilibrium Index found at [7, 3, 0]
+
+
+
+
+
+
+
+
+
+Solution for question 2.
+
+def reorder(A):
+
+	k = 0
+
+	for i in A:
+		if i:
+			A[k] = i
+			k = k + 1
+
+	for i in range(k, len(A)):
+		A[i] = 0
+
+if __name__ == '__main__':
+
+	A = [6, 0, 8, 2, 3, 0, 4, 0, 1]
+
+	reorder(A)
+	print(A)
+
+Output :
+6 8 2 3 4 1 0 0 0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 3.
+
+def linearSearch(arr, n): 
+	for i in range(n): 
+		if arr[i] is i: 
+			return i 
+	return -1
+ 
+arr = [-10, -1, 0, 3, 10, 11, 30, 50, 100] 
+n = len(arr) 
+print("Fixed Point is " + str(linearSearch(arr,n))) 
+
+
+Output:
+Fixed Point is 3
+
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 4.
+
+def getInvCount(arr, n): 
+
+	inv_count = 0
+	for i in range(n): 
+		for j in range(i + 1, n): 
+			if (arr[i] > arr[j]): 
+				inv_count += 1
+
+	return inv_count 
+
+arr = [1, 20, 6, 4, 5] 
+n = len(arr) 
+print("Number of inversions are", getInvCount(arr, n)) 
+
+
+Output:
+Number of inversions are 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 5.
+
+def reverseList(A, start, end): 
+	while start < end: 
+		A[start], A[end] = A[end], A[start] 
+		start += 1
+		end -= 1
+
+A = [1, 2, 3, 4, 5, 6] 
+print(A) 
+reverseList(A, 0, 5) 
+print("Reversed list is") 
+print(A) 
+
+
+Output:
+1 2 3 4 5 6 
+Reversed array is 
+6 5 4 3 2 1 

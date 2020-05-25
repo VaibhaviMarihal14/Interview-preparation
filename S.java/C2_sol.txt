@@ -1,0 +1,210 @@
+Solution for question 1.
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Main {
+	public static void equilibriumIndex(int A[]) {
+		int left[] = new int[A.length];
+
+		left[0] = 0;
+
+		for (int i = 1; i < A.length; i++) {
+			left[i] = left[i - 1] + A[i - 1];
+		}
+		int right = 0;
+		List<Integer> indices = new ArrayList<>();
+
+		for (int i = A.length - 1; i >= 0; i--) {
+
+			if (left[i] == right) {
+				indices.add(i);
+			}
+			right += A[i];
+		}
+
+		System.out.println("Equilibrium Index found at " + indices);
+	}
+	public static void main (String[] args) {
+		int[] A = { 0, -3, 5, -4, -2, 3, 1, 0 };
+		equilibriumIndex(A);
+	}
+}
+
+Output :
+Equilibrium Index found at [7, 3, 0]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 2.
+
+import java.util.Arrays;
+
+class Main
+{
+	public static void reorder(int[] A)
+	{
+		int k = 0;
+
+		for (int i: A)
+		{
+			if (i != 0) {
+				A[k++] = i;
+			}
+		}
+		for (int i = k; i < A.length; i++) {
+			A[i] = 0;
+		}
+	}
+	public static void main(String[] args)
+	{
+		int[] A = { 6, 0, 8, 2, 3, 0, 4, 0, 1 };
+
+		reorder(A);
+		System.out.println(Arrays.toString(A));
+	}
+}
+
+Output :
+6 8 2 3 4 1 0 0 0 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 3.
+
+class Test 
+{ 
+	static int linearSearch(int arr[], int n) { 
+		int i; 
+		for(i = 0; i < n; i++) { 
+			if(arr[i] == i) 
+				return i; 
+		} 
+		return -1; 
+	} 
+	public static void main(String args[]) { 
+		int arr[] = {-10, -1, 0, 3, 10, 11, 30, 50, 100}; 
+		int n = arr.length; 
+		System.out.println("Fixed Point is "+ linearSearch(arr, n)); 
+	} 
+} 
+
+
+
+Output:
+Fixed Point is 3
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 4.
+
+ class Test { 
+	static int arr[] = new int[] { 1, 20, 6, 4, 5 }; 
+
+	static int getInvCount(int n) 
+	{ 
+		int inv_count = 0; 
+		for (int i = 0; i < n - 1; i++) 
+			for (int j = i + 1; j < n; j++) 
+				if (arr[i] > arr[j]) 
+					inv_count++; 
+
+		return inv_count; 
+	} 
+
+	public static void main(String[] args) 
+	{ 
+		System.out.println("Number of inversions are "+ getInvCount(arr.length)); 
+	} 
+} 
+
+Output:
+Number of inversions are 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 5.
+
+public class Test { 
+	static void rvereseArray(int arr[], int start, int end) 
+	{ 
+		int temp; 
+		
+		while (start < end) 
+		{ 
+			temp = arr[start]; 
+			arr[start] = arr[end]; 
+			arr[end] = temp; 
+			start++; 
+			end--; 
+		} 
+	}	 
+	
+	static void printArray(int arr[], int size) 
+	{ 
+		for (int i = 0; i < size; i++) 
+			System.out.print(arr[i] + " "); 
+		
+		System.out.println(); 
+	} 
+
+	public static void main(String args[]) { 
+		
+		int arr[] = {1, 2, 3, 4, 5, 6}; 
+		printArray(arr, 6); 
+		rvereseArray(arr, 0, 5); 
+		System.out.print("Reversed array is \n"); 
+		printArray(arr, 6); 
+		
+	} 
+} 
+
+Output :
+1 2 3 4 5 6 
+Reversed array is 
+6 5 4 3 2 1 

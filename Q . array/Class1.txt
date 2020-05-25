@@ -1,0 +1,92 @@
+Class 1.
+
+Question 1.
+
+Find pair with given sum in an array.
+
+Input : arr = [8,7,2,5,3,1]
+sum = 10
+
+Output : pair found at index 0 and 2
+or
+	pair found at index 1 and 4
+
+
+
+
+
+
+
+Question 2.
+
+Print all the sub arrays with 0 sum.
+
+Input : arr[] = { 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 };
+
+Output : 
+Subarray [0..2]
+Subarray [0..9]
+Subarray [1..3]
+Subarray [2..5]
+Subarray [3..9]
+Subarray [5..7]
+
+
+Input : arr[] = { 4, 2, -3, -1, 0, 4 };
+
+Output :
+Subarray [2..5]
+Subarray [4..4]
+
+
+
+
+
+
+
+
+
+
+Question 3.
+
+Sort binary array in a linear time.
+
+Input : { 1, 0, 1, 0, 1, 0, 0, 1 }
+Outpt : { 0, 0, 0, 0, 1, 1, 1, 1 }
+
+
+
+
+
+
+
+
+
+
+Question 4.
+
+Find a duplicate element in a limited range of array.
+
+Input : { 1, 2, 3, 4, 4 }
+Output : The duplicate element is 4
+
+Input : { 1, 2, 3, 4, 2 }
+Output : The duplicate element is 2 
+
+
+
+
+
+
+
+
+
+
+Question 5.
+
+Shuffle a given array of elements.
+
+Input : { 1, 2, 3, 4, 5, 6 };
+Output: [2, 4, 1, 5, 3, 6]
+
+here output can be any random permutations of input.
