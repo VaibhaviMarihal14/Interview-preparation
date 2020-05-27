@@ -1,0 +1,11 @@
+Class 1.
+
+
+Question 1.
+
+Print all the duplicates in the input string.
+
+Input : str = "test string"
+
+Output : s,  count = 2
+	 t,  count = 3
