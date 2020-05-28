@@ -9,3 +9,18 @@ Input : str = "test string"
 
 Output : s,  count = 2
 	 t,  count = 3
+
+
+
+
+
+
+Class 2.
+
+program to check if a string is palindrome or not.
+
+Input : malayalam
+Output : Yes
+
+Input : good
+Output : No
