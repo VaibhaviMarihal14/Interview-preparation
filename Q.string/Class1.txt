@@ -24,3 +24,37 @@ Output : Yes
 
 Input : good
 Output : No
+
+
+
+
+
+
+Question 3.
+
+Print consecutive characters together in a line
+Given a sequence of characters, print consecutive sequence of characters in a line, otherwise
+print it in a new line.
+
+Examples:
+
+Input  : ABCXYZACCD
+Output : ABC
+         XYZ
+         A
+         C
+         CD
+
+Input : ABCZYXACCD
+Output: ABC
+        ZYX
+        A
+        C
+        CD
+
+
+
+
+
+
+

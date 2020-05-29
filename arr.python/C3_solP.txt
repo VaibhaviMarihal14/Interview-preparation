@@ -40,3 +40,74 @@ print(miss)
 Output :
 
 3
+
+
+
+
+
+
+
+
+
+
+Solution for question 3.
+
+import math 
+def rmsValue(arr, n): 
+	square = 0
+	mean = 0.0
+	root = 0.0
+	
+	for i in range(0,n): 
+		square += (arr[i]**2) 
+	
+	mean = (square / (float)(n)) 
+	
+	root = math.sqrt(mean) 
+	
+	return root 
+
+arr = [10, 4, 6, 8] 
+n = len(arr) 
+print(rmsValue(arr, n)) 
+
+
+Output :
+7.3484692283495345
+
+
+
+
+
+
+
+
+
+Solution for question 4.
+
+def getAvg(prev_avg, x, n): 
+	return ((prev_avg *
+			n + x) /
+			(n + 1)); 
+
+def streamAvg(arr, n): 
+	avg = 0; 
+	for i in range(n): 
+		avg = getAvg(avg, arr[i], i); 
+		print("Average of ", i + 1, 
+			" numbers is ", avg); 
+
+arr = [10, 20, 30, 
+	40, 50, 60]; 
+n = len(arr); 
+streamAvg(arr, n); 
+
+
+Output :
+
+Average of 1 numbers is 10.000000 
+Average of 2 numbers is 15.000000 
+Average of 3 numbers is 20.000000 
+Average of 4 numbers is 25.000000 
+Average of 5 numbers is 30.000000 
+Average of 6 numbers is 35.000000

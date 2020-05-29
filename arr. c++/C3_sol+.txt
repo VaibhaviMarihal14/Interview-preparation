@@ -67,3 +67,88 @@ int main()
 Output :
 
 3
+
+
+
+
+
+
+
+
+
+Solution for question 3.
+
+#include <bits/stdc++.h> 
+using namespace std; 
+float rmsValue(int arr[], int n) 
+{ 
+	int square = 0; 
+	float mean = 0.0, root = 0.0; 
+
+	for (int i = 0; i < n; i++) { 
+		square += pow(arr[i], 2); 
+	} 
+	mean = (square / (float)(n)); 
+ 
+	root = sqrt(mean); 
+
+	return root; 
+} 
+int main() 
+{ 
+	int arr[] = { 10, 4, 6, 8 }; 
+	int n = sizeof(arr) / sizeof(arr[0]); 
+
+	cout << rmsValue(arr, n); 
+
+	return 0; 
+} 
+
+Output:
+7.34847
+
+
+
+
+
+
+
+
+
+
+
+Solution for question 4.
+
+#include <stdio.h> 
+float getAvg(float prev_avg, int x, int n) 
+{ 
+	return (prev_avg * n + x) / (n + 1); 
+} 
+ 
+void streamAvg(float arr[], int n) 
+{ 
+	float avg = 0; 
+	for (int i = 0; i < n; i++) { 
+		avg = getAvg(avg, arr[i], i); 
+		printf("Average of %d numbers is %f \n", i + 1, avg); 
+	} 
+	return; 
+} 
+int main() 
+{ 
+	float arr[] = { 10, 20, 30, 40, 50, 60 }; 
+	int n = sizeof(arr) / sizeof(arr[0]); 
+	streamAvg(arr, n); 
+
+	return 0; 
+} 
+
+
+Output :
+
+Average of 1 numbers is 10.000000 
+Average of 2 numbers is 15.000000 
+Average of 3 numbers is 20.000000 
+Average of 4 numbers is 25.000000 
+Average of 5 numbers is 30.000000 
+Average of 6 numbers is 35.000000
