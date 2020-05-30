@@ -58,3 +58,44 @@ Output: ABC
 
 
 
+
+Question 4.
+
+Program to check if two strings are same or not
+Given two strings, the task is to check if these two strings are identical(same) or not.
+
+Input: string1 = “Good Morning”, string2 = “Good Morning”
+Output: Yes
+
+Input: string1 = “Good Morning”, string2 = “Good”
+Output: No
+
+Input: string1 = “Good Morning”, string2 = “Good morning”
+Output: No
+
+
+
+
+
+
+
+Question 5.
+
+Check if a string is substring of another
+Given two strings s1 and s2, find if s1 is a substring of s2. 
+If yes, return the index of the first occurrence, else return -1.
+
+Input: s1 = "for", s2 = "goodforyou"
+Output: 4
+Explanation:
+String "for" is present as a substring
+of s2.
+
+Input: s1 = "practice", s2 = "goodforyou"
+Output: -1.
+Explanation:
+There is no occurrence of "practice" in
+"goodforyou"
+
+
+
